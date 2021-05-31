@@ -37,13 +37,10 @@ class App extends Component {
       <div className="App">
         {this.state.isSignedIn ? (
           <span>
-            <div>REGISTRATE POR FAVOR!</div>
-            <button onClick={() => firebase.auth().signOut()}>CERRAR CESION!</button>
+            <div>FELICIDADES, INICIASTE!!</div>
+            <button onClick={() => firebase.auth().signOut()}>¿CERRAR CESION?</button>
             <h1>BIENVENIDO TILIN(A): {firebase.auth().currentUser.displayName}</h1>
-            <img
-              alt="profile picture"
-              src={firebase.auth().currentUser.photoURL}
-            />
+            <img alt="profile picture" src={firebase.auth().currentUser.photoURL}/>
           </span>
         ) : (
           <StyledFirebaseAuth
@@ -57,4 +54,4 @@ class App extends Component {
 }
 
 export default App;
-//git run deploy
+//npm run deploy
